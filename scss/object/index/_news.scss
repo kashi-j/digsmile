@@ -1,0 +1,44 @@
+/* ---------------------------- */
+/* LATEST TOPICS
+/* ---------------------------- */
+.news{
+  .inner{
+    box-sizing: border-box;
+    padding:60px 0;
+    @include underTab{
+      padding-bottom: 40px;
+    }
+    @include underSP{
+      padding-top: 40px;
+    }
+    .news-list{
+      width:calc((700 /1100) * 100%);
+      margin-left:auto;
+      @include underTab{
+        width:100%;
+      }
+      .news-item{
+        border-bottom: 1px solid cl(black-news_border);
+        .news-list_time{
+          color: cl(black-news_time);
+          font-size: 1rem;
+          margin-top:32px;
+        }
+        .news-list_title{
+          display: inline-block;
+          font-size: 1.4rem;
+          margin:13px 0;
+          font-weight: bold;
+          color:cl(black-main);
+        }
+      }
+    }
+    .news-btn{
+      display: block;
+      margin:30px 0 0 auto;
+      @include underTab{
+        margin-left:unset;
+      }
+    }
+  }
+}

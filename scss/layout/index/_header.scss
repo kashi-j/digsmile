@@ -1,0 +1,178 @@
+/* ---------------------------- */
+/* header
+/* ---------------------------- */
+.header{
+  position: relative;
+  /* ---------------------------- */
+  /* 固定パーツ
+  /* ---------------------------- */
+  .header-fixed{
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    // サイトロゴ
+    .site-logo{
+      position:relative;
+      top:30px;
+      left:calc((58 /1440) * 100%);
+      @include underTab{
+        top: 33.84px;
+      }
+      @include underSP{
+        top: 19.84px;
+      }
+      a{
+        display: inline-block;
+        width:calc((260 / 1440) * 100%);
+        @include underTab{
+          width:calc((189 / 768) * 100%);
+        }
+        @include underSP{
+          width:calc((189 / 375) * 100%);
+        }
+      }
+    }
+    // ハンバーガーボタン
+    .burger-btn{
+      position:absolute;
+      display: block;
+      z-index: 1;
+      top:32px;
+      right: calc((97 / 1440) * 100%);
+      width:22px;
+      height: 10px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      @include underTab{
+        top:38.5px;
+        right: calc((69 / 768) * 100%);
+      }
+      @include underSP{
+        top: 24px;
+        right: 56px;
+      }
+      .bar{
+        position:absolute;
+        width: 100%;
+        height: 2px;
+        display: block;
+        background-color:cl(white);
+        transition: all 0.5s;
+        border-radius: 10px;
+        &.bar-top{
+          top:0;
+        }
+        &.bar-middle{
+          top:0;
+          bottom: 0;
+          margin:auto;
+        }
+        &.bar-bottom{
+          bottom:0;
+        }
+      }
+      &::after{
+        content:'MENU';
+        color:cl(white);
+        font-size: 1rem;
+        position:absolute;
+        top:0;
+        left:35px;
+      }
+      // スクロール後
+      &.color-black{
+        .bar{
+          background-color:cl(black-main);
+        }
+        &::after{
+          color: cl(black-main);
+        }
+      }
+      // クリック時
+      &.-active{
+        transform: rotate(360deg);
+        &::after{
+          color:cl(white);
+        }
+        .bar{
+          background-color: cl(white);
+        }
+        .bar-top{
+          transform: translateY(4px) rotate(-45deg);
+        }
+        .bar-middle{
+          transform: rotate(45deg);
+        }
+        .bar-bottom{
+          opacity:0;
+        }
+      }
+    }
+  }
+  // モーダル
+  .nav-wrapper{
+    position: absolute;
+    top:0;
+    right:calc((-520 / 1440) * 100%);
+    width:calc((520 / 1440) * 100%);
+    height:100vh;
+    background-color: cl(black-header-right_bg);
+    opacity:0.95;
+    transition: all 0.5s ease-in-out;
+    &.-active{
+      position:absolute;
+      right:0;
+    }
+    .nav-list{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top:calc((180 / 900) * 100%);
+      left:50%;
+      transform: translateX(-50%);
+      .nav-item{
+        text-align: center;
+        display: inline-block;
+        &:not(:last-child){
+          margin-bottom:calc((30 /900) * 100vh);
+          right:50%;
+        }
+        &:first-child{
+          width:42.15px;
+          height:45px;
+          background-color: cl(white);
+          position: relative;
+          left:50%;
+          transform: translateX(-50%);
+          border-radius: 50%;
+          margin-bottom: 40px;
+        }
+        a{
+          font-size: 2rem;
+          color:cl(white);
+          letter-spacing: 1.36px;
+          font-weight: 800;
+          @include underSP{
+            font-size: 1.6rem;
+          }
+          &:hover{
+            background: linear-gradient(transparent 90%, cl(white) 0%);
+          }
+          &.nav-logo{
+            position: absolute;
+            right:-5px;
+            top:50%;
+            transform: translateY(-50%);
+            display: inline-block;
+            color:cl(black);
+            font-size: 5rem;
+            &:hover{
+              background: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

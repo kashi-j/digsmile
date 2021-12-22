@@ -1,0 +1,44 @@
+/* ---------------------------- */
+/* ABOUT
+/* ---------------------------- */
+.about{
+  .inner{
+    @include underTab{
+      width: 100%;
+      margin:0 0;
+      max-width: unset;
+    }
+    .about-wrapper{
+      background: url('../img/index/about-img@2x.png') no-repeat center center / cover;
+      height:auto;
+      padding: 110px calc((460 / 1100) * 100%)  110px calc((50 / 1100) * 100%);
+      position: relative;
+      top:110px;
+      @include underTab{
+        top:80px;
+        width: 100%;
+        padding: 60px 89px;
+        box-sizing: border-box;
+      }
+      @include underSP{
+        padding: 50px 15px;
+      }
+      .about-content{
+        background-color: cl(white);
+        padding:50px 30px;
+        min-width:calc((590 /1100) * 100%);
+        box-sizing: border-box;
+        @include underTab{
+          padding:40px 30px;
+        }
+        @include underSP{
+          padding:50px 15px 50px 30px;
+        }
+        .about-desc{
+          padding-bottom: 30px;
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}

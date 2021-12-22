@@ -1,0 +1,46 @@
+/* ---------------------------- */
+/* WORKS & CULTURE
+/* ---------------------------- */
+.works-culture{
+  background-color: cl(black-works-culture_bg);
+  .inner{
+    display: flex;
+    flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:180px 0 60px 0;
+    @include underTab{
+      padding-top:140px;
+      flex-direction: column;
+      padding-bottom:40px;
+    }
+    @include underSP{
+      padding-top:120px;
+    }
+    .cmn-desc{
+      padding:22px 0;
+    }
+    .works-content{
+      width: calc((520 / 1100) * 100%);
+      @include underTab{
+        width: calc(( 520/ 768) * 100%);
+      }
+      @include underSP{
+        width:100%;
+      }
+    }
+    .culture-content{
+      width: calc((520 / 1100) * 100%);
+      @include underTab{
+        margin-top:80px;
+        width: calc((520 / 768) * 100%);
+      }
+      @include underSP{
+        margin-top:40px;
+      }
+      @include underSP{
+        width:100%;
+      }
+    }
+  }
+}

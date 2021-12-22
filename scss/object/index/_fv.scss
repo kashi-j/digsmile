@@ -1,0 +1,86 @@
+/* ---------------------------- */
+/* FirstView
+/* ---------------------------- */
+.fv{
+    background-color: cl(white);
+    position: relative;
+    height: 100vh;
+    .fv-left-wrapper{
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width:calc((1100 / 1440) * 100%);
+      height: calc((640 / 740) * 100%);
+      background-color: cl(black);
+      @include underTab{
+        height: calc((890 / 1024) * 100%);
+        width: calc((600 / 768) * 100%);
+      }
+      @include underSP{
+      }
+      .fv-left-image{
+        background:url(../img/index/the-honest-company-uM-WXMr0YXc-unsplash@2x.png) no-repeat top 0% left 75% / 180vh;
+        opacity: 0.57;
+        width: 100%;
+        height: 100%;
+        @include underTab{
+          background: url(../img/index/the-honest-company-uM-WXMr0YXc-unsplash@2x.png) no-repeat top 0% left 55%/192vh;
+          @include underSP{
+            background: url(../img/index/the-honest-company-uM-WXMr0YXc-unsplash@2x.png) no-repeat top 0% left 53%/192vh;
+          }
+        }
+      }
+    }
+    .fv-right{
+      position: absolute;
+      top: 0;
+      right:0;
+      z-index: 0;
+      width:calc((780 /1440) * 100%);
+      height:100%;
+      background-color: cl(black-header-right_bg);
+      @include underTab{
+        width:calc((562 / 768) * 100%);
+      }
+      @include underSP{
+        width:calc((283 / 375) * 100%);
+      }
+    }
+    // コピー
+    .fv-copy{
+      position:absolute;
+      right:calc((194/1440) * 100%);
+      top:calc((161/740)*100vh);
+      z-index: 2;
+      color:cl(white);
+      letter-spacing: 0;
+      @include underTab{
+        top:calc((333/1024)*100vh);
+        right:calc((90/768) * 100%);
+        @include underSP{
+          top:calc((178/667)*100vh);
+          right:calc((15/375) * 100%);
+        }
+      }
+      .copy-sub{
+        font-size: 2rem;
+        font-weight: bold;
+        line-height: 1.2;
+        @include underTab{
+          line-height: 1.3;
+          font-size: 1.6rem;
+        }
+      }
+      .copy-main{
+        font-size: 7.2rem;
+        font-weight: 700;
+        line-height: calc(86 /72);
+        margin-top:10px;
+        @include underTab{
+          font-size: 5.6rem;
+          line-height: 1;
+        }
+      }
+    }
+}

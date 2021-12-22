@@ -1,0 +1,14 @@
+/* ---------------------------- */
+/* footer
+/* ---------------------------- */
+.footer{
+  background-color: cl(black-footer);
+  text-align: center;
+  small{
+    color:cl(white);
+    font-size: 1rem;
+    padding:21px 0 19px 0;
+    display: inline-block;
+    // box-sizing: border-box;
+  }
+}

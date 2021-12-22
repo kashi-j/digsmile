@@ -1,0 +1,41 @@
+/* ---------------------------- */
+/* CONTACT
+/* ---------------------------- */
+.contact{
+  background-color: cl(black-contact_bg);
+  .inner{
+    display:flex;
+    justify-content: space-between;
+    padding:60px 0 120px 0;
+    @include underTab{
+      flex-direction: column-reverse;
+      padding:40px 0 90px
+    }
+    @include underSP{
+      padding-bottom:40px;
+    }
+    .contact-text{
+      padding-top:72px;
+      width:calc((440 /1100) * 100%);
+      @include underTab{
+        padding-top:40px;
+        width:calc((520 /700) * 100%);
+      }
+      @include underSP{
+        width: 100%;
+      }
+      .works-btn{
+        margin-top:30px;
+      }
+    }
+    .contact-img_wrapper{
+      width:calc((580 /1100) * 100%);
+      @include underTab{
+        width:calc((520 /700) * 100%);
+      }
+      @include underSP{
+        width: 100%;
+      }
+    }
+  }
+}

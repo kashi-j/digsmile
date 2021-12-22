@@ -1,0 +1,101 @@
+/* ---------------------------- */
+/* FirstView
+/* ---------------------------- */
+.fv{
+  background-color: cl(white);
+  position: relative;
+  height: 451px;
+  width: 100%;
+  @include underTab{
+    height: 615px;
+  }
+  @include underSP{
+    height:365px;
+  }
+  .fv-left-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width:calc((1100/1440) * 100%);
+    height: calc((387/451)*100%);
+    background-color: cl(black);
+    @include underTab{
+      width: calc((578/768) * 100%);
+      height:calc((529/615)*100%);
+      @include underSP{
+        width: calc((287/375) * 100%);
+        height:calc((270/365)*100%);
+      }
+    }
+    .fv-left-image{
+      background: url('../img/contact/photo-of-people-looking-on-tablet-3182835@2x.png') no-repeat top 44% left 0% / 100%;
+      opacity: 0.57;
+      width: 100%;
+      height: 100%;
+      @include underTab{
+        background: url('../img/contact/photo-of-people-looking-on-tablet-3182835@2x.png') no-repeat top 43% left 44% / 267%;
+        @include underSP{
+          background: url("../img/contact/photo-of-people-looking-on-tablet-3182835@2x.png") no-repeat top 43% left 70%/150%;
+        }
+      }
+    }
+  }
+  .fv-right{
+    position: absolute;
+    top: 0;
+    right:0;
+    z-index: 0;
+    width:calc((780 /1440) * 100%);
+    height:100%;
+    background-color: cl(black-header-right_bg);
+    @include underTab{
+      width:calc((406 / 768) * 100%);
+      @include underSP{
+        width:calc((198 / 375) * 100%);
+      }
+    }
+  }
+  // コピー
+  .fv-copy{
+    position:absolute;
+    top:161px;
+    right:calc((150 / 1440) * 100%);
+    z-index: 2;
+    color:cl(white);
+    @include underTab{
+      top: 178px;
+      right:calc((33 / 768) * 100%);
+      @include underSP{
+        top: 137px;
+        right:calc((15 /375) * 100%);
+      }
+    }
+    .copy-sub{
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 1.2;
+      padding-top: 5px;
+      @include underTab{
+        line-height: 1.3;
+        font-size: 1.6rem;
+        @include underSP{
+          text-align: right;
+        }
+      }
+    }
+    .copy-main{
+      font-size: 7.2rem;
+      font-weight: 700;
+      line-height: calc(86 /72);
+      letter-spacing: calc((4.54/72) * 1em);
+      @include underTab{
+        font-size: 5.6rem;
+        line-height: 1;
+        @include underSP{
+          font-size: 5.2rem;
+        }
+      }
+    }
+  }
+}

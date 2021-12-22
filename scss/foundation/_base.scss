@@ -1,0 +1,63 @@
+/* ---------------------------- */
+/* Base
+/* ---------------------------- */
+
+// COLORS
+// @inlcude cl(black);
+//--------------------------------------------------
+
+$colors: (
+	white:#fff,
+	black:#000,
+	black-header-right_bg:#222222,
+	black-footer:#525252,
+	black-contact_bg:#F2F2F2,
+	black-main:#333333,
+	black-news_time:#CECECE,
+	black-news_border:#DDDDDD,
+	black-works-culture_bg:#F0F0F0,
+);
+
+
+
+@function cl($key) {
+	@return map-get($colors, $key);
+}
+
+// FONT
+// @inlcude TimesNewRoman;
+//--------------------------------------------------
+
+@mixin MontSerrat {
+	font-family: "Montserrat", "YuGothic", sans-serif;
+}
+
+// RESPONSIVE
+// @include overTab
+//--------------------------------------------------
+
+@mixin underTab {
+  @media print,screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin underSP {
+  @media print,screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+.sp_only {
+	display: none;
+	@include underTab {
+		display: block;
+	}
+}
+
+.pc_only {
+	display: block;
+	@include underTab {
+		display: none;
+	}
+}

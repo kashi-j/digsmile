@@ -1,0 +1,51 @@
+/* ---------------------------- */
+/* MESSAGE
+/* ---------------------------- */
+.message{
+  .inner{
+    position: relative;
+    padding-top: 140px;
+    padding-bottom: 120px;
+    @include underSP{
+      margin-left:0;
+      padding-bottom: 80px;
+    }
+
+    .message-img_wrapper{
+      width:calc((420 /1100) * 100%);
+      height: 282px;
+      background:url("../img/about/workplace-1245776_1920@2x.png") no-repeat top 58% left 45%/248%;
+      position:absolute;
+      top:0;
+      @include underTab{
+        width:calc((320 /708) * 100%);
+        height: 216px;
+      }
+      @include underSP{
+        height: 230px;
+        width:calc((340 /375) * 100%);
+      }
+    }
+    .message-content{
+      background-color: cl(black-works-culture_bg);
+      width:calc((770 / 1100) * 100%);
+      box-sizing:border-box;
+      padding: 120px calc((185 / 1100) * 100%) 90px;
+      margin-left: auto;
+      @include underTab{
+        padding: 109px calc((40 / 706) * 100%) 78px;
+      }
+      @include underSP{
+        width:100%;
+        margin-left:calc((15 /375) * 100%);
+        padding: 109px calc((30 / 375) * 100%) 78px;
+        font-size: 1.4rem;
+      }
+      .message-desc{
+        &:not(:first-of-type){
+          padding-top:30px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+/* ---------------------------- */
+/* FirstView
+/* ---------------------------- */
+.fv{
+  background-color: cl(white);
+  position: relative;
+  height: 464px;
+  @include underTab{
+    height: 615px;
+  }
+  @include underSP{
+    height:449px;
+  }
+  .fv-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width:calc((1100 / 1440) * 100%);
+    height: 387px;
+    background: url(../img/about/jacek-dylag-PMxT0XtQ--A-unsplash@2x.png) no-repeat top 14% center /cover;
+    @include underTab{
+      width: calc((587 / 768) * 100%);
+      height: 529px;
+      background: url(../img/about/jacek-dylag-PMxT0XtQ--A-unsplash@2x.png) no-repeat top left 48%/213%;
+    }
+    @include underSP{
+      width: calc((287 / 375) * 100%);
+      height: 387px;
+      background: url(../img/about/jacek-dylag-PMxT0XtQ--A-unsplash@2x.png) no-repeat top 0% left 54%/353%
+    }
+    .fv-left_wrapper{
+      background-color: cl(black);
+      opacity: 0.34;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .fv-right{
+    position: absolute;
+    top: 0;
+    right:0;
+    z-index: 0;
+    width:calc((780 /1440) * 100%);
+    height:100%;
+    background-color: cl(black-header-right_bg);
+    @include underTab{
+      width:calc((406 / 768) * 100%);
+    }
+    @include underSP{
+      width:calc((198 / 375) * 100%);
+    }
+  }
+  // コピー
+  .fv-copy{
+    position:absolute;
+    top:161px;
+    right:calc((194 /1440) * 100%);
+    z-index: 2;
+    color:cl(white);
+    letter-spacing: 0;
+    @include underSP{
+      top: 178px;
+      right:calc((15 / 375) * 100%);
+    }
+    .copy-sub{
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 1.2;
+      @include underTab{
+        line-height: 1.3;
+        font-size: 1.6rem;
+      }
+    }
+    .copy-main{
+      font-size: 7.2rem;
+      font-weight: 700;
+      line-height: calc(86 /72);
+      margin-top:10px;
+      @include underTab{
+        font-size: 5.2rem;
+        line-height: 1;
+      }
+    }
+  }
+}

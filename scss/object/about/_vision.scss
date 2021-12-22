@@ -1,0 +1,36 @@
+/* ---------------------------- */
+/* VISION
+/* ---------------------------- */
+.vision{
+  .inner{
+    .vision-content{
+      padding:120px 0 120px calc((226 /1100) * 100%);
+      @include underTab{
+        padding:120px 0 80px calc((120 /708) * 100%);
+      }
+      @include underSP{
+        padding:80px 0 80px 0;
+      }
+      @include underSP{
+        .vision-title{
+          font-size: 3.2rem;
+        }
+      }
+      .vision-subTitle{
+        font-size: 2.4rem;
+        font-weight: bold;
+        padding-bottom: 30px;
+      }
+      .view-desc{
+        .message-desc{
+          @include underSP{
+            font-size: 1.4rem;
+          }
+          &:not(:first-child){
+            padding-top:30px;
+          }
+        }
+      }
+    }
+  }
+}
